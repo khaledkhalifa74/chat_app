@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "81616795900",
+    "project_id": "chatfirebase-c90ad",
+    "storage_bucket": "chatfirebase-c90ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81616795900:android:e3a14cfb5510fe169b7f79",
+        "android_client_info": {
+          "package_name": "com.example.chatfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdql3yjk1_9HS0n2ZACc4lzTREK6_xbR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
