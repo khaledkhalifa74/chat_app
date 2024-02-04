@@ -10,9 +10,9 @@ class ChatScreen extends StatelessWidget {
 
   static String id = 'ChatScreen';
 
-  TextEditingController messageController = TextEditingController();
+  final TextEditingController messageController = TextEditingController();
   final controller = ScrollController();
-  List<MessageModel> messagesList=[];
+  final List<MessageModel> messagesList=[];
 
   @override
   Widget build(BuildContext context) {

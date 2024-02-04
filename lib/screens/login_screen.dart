@@ -1,6 +1,5 @@
 import 'package:chat_firebase/blocs/auth_bloc/auth_bloc.dart';
 import 'package:chat_firebase/blocs/auth_bloc/auth_event.dart';
-import 'package:chat_firebase/cubits/auth_cubit/auth_cubit.dart';
 import 'package:chat_firebase/cubits/chat_cubit/chat_cubit.dart';
 import 'package:chat_firebase/helper/showSnackBar.dart';
 import 'package:chat_firebase/screens/chat_screen.dart';
@@ -13,14 +12,22 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import '../blocs/auth_bloc/auth_state.dart';
 
-class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   static String id = 'LoginScreen';
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
   bool isLoading = false;
 
   TextEditingController emailController = TextEditingController();
+
   TextEditingController passwordController = TextEditingController();
+
   GlobalKey<FormState> formKey = GlobalKey();
 
   @override

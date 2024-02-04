@@ -4,22 +4,29 @@ import 'package:chat_firebase/helper/showSnackBar.dart';
 import 'package:chat_firebase/screens/chat_screen.dart';
 import 'package:chat_firebase/widgets/custom_button.dart';
 import 'package:chat_firebase/widgets/custom_text_form_field.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 
-class RegisterScreen extends StatelessWidget {
-  RegisterScreen({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   static String id = 'RegisterScreen';
+
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
   String? email;
+
   String? password;
+
   bool isLoading = false;
 
   TextEditingController emailController = TextEditingController();
+
   TextEditingController passwordController = TextEditingController();
 
   GlobalKey<FormState> formKey = GlobalKey();
